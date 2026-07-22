@@ -25,6 +25,8 @@ and there $R=9$ and $C=6$, the department would write down.
 The matrix would be filled in as follows:
 
 <!-- add image -->
+<img width="376" height="440" alt="image" src="https://github.com/user-attachments/assets/63fd0aca-6335-496e-b488-00809e8eea1b" />
+
 
 ### Input
 There will be multiple datasets. Each dataset consist of two lines. The first line contains $R (2 <= R <= 20)$, a space, $C (2<=C<=20)$. The next line is a string of characters that represent the contents of the matrix $(R x C characters)$. The characters are in row major order. The last input set is followed by a line containing two zeros $(0,0)$. This line should not be processed.
