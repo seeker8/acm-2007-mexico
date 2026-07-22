@@ -63,4 +63,28 @@ The output consists of a list of pairs of integers that correspond to the studen
 
 ### Sample Input
 214 8 13 25 1<br>
-315 7 10 28 0
+315 7 10 28 0<br>
+550 9 20 22 1<br>
+120 6 10 22 0<br>
+335 8 11 20 0<br>
+220 10 20 22 1<br>
+450 7 15 21 0<br>
+180 10 14 20 1<br>
+250 7 12 23 0<br>
+300 8 16 23 0
+
+3
+300 8 20 20<br>
+320 7 15 24
+
+5
+340 8 15 25<br>
+365 10 25 20<br>
+440 9 30 20
+
+### Sample Output
+300 1<br>
+320 0<br>
+340 0<br>
+365 1<br>
+440 1
