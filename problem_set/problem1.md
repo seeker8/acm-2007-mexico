@@ -20,4 +20,47 @@ S<sub>IN</sub> = <A<sub>IN</sub>, SH<sub>IN</sub>, CH<sub>IN</sub>>, for example
 
 S<sub>735</sub> = <8, 13, 25>, S<sub>677</sub> = <6, 10, 22>
 
-The Manhattan distance is given by: Md<sub>(Si,Sj)</sub> = | A<sub>i</sub> - A<sub>j</sub> | + | 
+The Manhattan distance is given by: Md<sub>(Si,Sj)</sub> = | A<sub>i</sub> - A<sub>j</sub> | + | SH<sub>i</sub> - SH<sub>j</sub> | + | CH<sub>i</sub> - CH<sub>j</sub> |
+
+Here is an example: Md<sub>S677, S512</sub> = | 6 - 8 | + | 10 - 15 | + | 22 - 20 | = 9
+
+The next procedure is used in forecasts, with base on statistics, and the possibility that a new student in a mathematics V course could fail.
+
+
+Step 1. Measure the Manhattan distance between the characteristic vector of the student and the characteristic vectors of all the students in the historical table (without considering the result parameter R).
+
+Step 2. Sort the students table based on their distance; in case of tie, take the order as it appears in the original table. Once sorted, take the first k (an even integer number), $1 \leq k \leq HR/2$ to determine the value of the more frequent indicator result and assign it to the student who the forecast is being done to, as seen in the example for NC = 300 student
+
+Step 1.
+
+| | |
+| - | - |
+| S(735, 300) | Md= \|8-8\| + \|13-20\| + \|25-20\| = 12 |
+| S(724, 300) | Md= \|7-8\| + \|10-20\| + \|28-20\| = 19 |
+| S(532, 300) | Md= \|9-8\| + \|20-20\| + \|22-20\| = 3 |
+| S(677, 300) | Md= \|6-8\| + \|10-20\| + \|22-20\| = 14 |
+| S(665, 300) | Md= \|9-8\| + \|23-20\| + \|25-20\| = 9 |
+| S(512, 300) | Md= \|8-8\| + \|15-20\| + \|20-20\| = 5 |
+
+Step 2.
+
+| S(532,300) | S(512,300) | S(665,300) | S(735, 300) | S(677, 300) | S(724, 300) |
+| - | - | - | - | - | - |
+| 3 | 5 | 9 | 12 | 14 | 19 |
+| 1 | 0 | 1 | 1 | 0 | 0 |
+
+Like $k=3$, the indicator result forecasted is 1.
+
+### Input
+The input to this problem will consist of a (non-empty) series of up to 50 data sets. Each data set will be formatted according to the following description, and there will be a blank space separating data sets.
+
+The first data set contains historical data up to 100 students who have taken this course before. The first number in each line is an integer for the Id Number, followed by three integers corresponding to the characteristic vector of that student.
+
+The following data sets contain an integer in the first line, corresponding to the $k$ value and in the lines to follow a table with the data of new students to whom the forecast has to be done.
+
+### Output
+The output consists of a list of pairs of integers that correspond to the students Id Number and the forecasted result, separated by a blank space.
+
+### Sample Input
+214 8 13 25 1<br>
+315 7 10 28 0
