@@ -17,7 +17,7 @@ For each test case print the last nonzero digit.
 | abbzazaazzalzalzzaaaaazlalzaazlalzla | 8 |
 | w | 1 |
 
-For example for the first test case the permutation are:
+For example for the first test case the permutation are:<br/>
 aaab<br>
 aaba<br>
 abaa<br>
